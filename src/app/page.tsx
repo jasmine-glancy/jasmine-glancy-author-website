@@ -15,7 +15,21 @@ export default function Home() {
           <Badge variant="secondary">Secondary Badge</Badge>
           <Badge variant="destructive">Destructive Badge</Badge>
 
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+
           <Separator />
+          <p>
+            Sufjan kale chips sally rooney phoebe bridgers plaid intermittent fasting authentic
+            monstera. Letterboxd neutral milk hotel side hustle, blundstones enneagram booktok
+            deschooling truffaut aeropress williamsburg. Wolf cut reading series woke, feral kale
+            chips hot honey austin. Messenger bag vape offal aesthetic raclette solarpunk heirloom
+            bone broth gr
+          </p>
 
           <Card>
             <CardHeader>
