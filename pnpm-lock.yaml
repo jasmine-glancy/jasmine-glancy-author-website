@@ -1,8 +1,11 @@
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
+
+overrides:
+  postcss@<8.5.10: ^8.5.10
 
 importers:
   .:
@@ -4983,13 +4986,6 @@ packages:
       }
     engines: { node: '>=4' }
 
-  postcss@8.4.31:
-    resolution:
-      {
-        integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==,
-      }
-    engines: { node: ^10 || ^12 || >=14 }
-
   postcss@8.5.16:
     resolution:
       {
@@ -9099,7 +9095,7 @@ snapshots:
       '@swc/helpers': 0.5.15
       baseline-browser-mapping: 2.10.41
       caniuse-lite: 1.0.30001800
-      postcss: 8.4.31
+      postcss: 8.5.16
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       styled-jsx: 5.1.6(@babel/core@7.29.7)(react@19.2.4)
@@ -9302,12 +9298,6 @@ snapshots:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-
-  postcss@8.4.31:
-    dependencies:
-      nanoid: 3.3.15
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.16:
     dependencies:
