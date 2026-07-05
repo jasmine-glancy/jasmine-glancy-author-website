@@ -42,11 +42,11 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "pnpm exec eslint --fix",
+      "pnpm exec prettier --write"
     ],
     "*.{json,css,md}": [
-      "prettier --write"
+      "pnpm exec prettier --write"
     ]
   }
 }
