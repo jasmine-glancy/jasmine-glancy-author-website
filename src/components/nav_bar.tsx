@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import Navbar from 'react-bootstrap/Navbar';
 
 function NavigationBar() {
@@ -15,15 +15,15 @@ function NavigationBar() {
       <Navbar.Toggle aria-controls="navbarScroll" />
 
       <div className="flex flex-wrap items-center gap-4">
-        <a href="#home" className="text-foreground/80 hover:text-foreground text-sm font-medium">
+        <Link href="#home" className="text-foreground/80 hover:text-foreground font-medium">
           Home
-        </a>
-        <a href="#about" className="text-foreground/80 hover:text-foreground text-sm font-medium">
+        </Link>
+        <Link href="#about" className="text-foreground/80 hover:text-foreground font-medium">
           About
-        </a>
-        <a href="#contact" className="text-foreground/80 hover:text-foreground text-sm font-medium">
+        </Link>
+        <Link href="#contact" className="text-foreground/80 hover:text-foreground font-medium">
           Contact
-        </a>
+        </Link>
       </div>
     </Navbar>
   );

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import NavigationBar from '@/components/nav_bar';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
             </Link>
           </div>
         </main>
+        <Footer />
       </div>
     </div>
   );
