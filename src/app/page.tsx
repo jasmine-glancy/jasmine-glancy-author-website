@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import NavigationBar from '@/components/nav_bar';
 import Footer from '@/components/footer';
+import ToTop from '@/components/to_top_button';
 
 export default function Home() {
   return (
@@ -60,6 +61,7 @@ export default function Home() {
             </Link>
           </div>
         </main>
+        <ToTop />
         <Footer />
       </div>
     </div>

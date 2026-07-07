@@ -245,3 +245,29 @@
     @apply text-muted-foreground hover:text-foreground;
   }
 }
+
+/* Icons */
+.lucide {
+  /* Change this! */
+  color: var(--background);
+  stroke-width: 4px;
+}
+
+.lucide:hover {
+  color: var(--primary);
+}
+
+/* Scroll to Top functionality */
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollToTopButton {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scrollToTopButton.visible {
+  opacity: 1;
+}
