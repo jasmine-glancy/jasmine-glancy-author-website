@@ -16,10 +16,10 @@ export default function Footer() {
 
         {/* Navigation Categories */}
 
-        <div className="flex flex-wrap justify-end gap-[15em] pr-[10em] sm:col-span-1 md:col-span-2">
+        <div className="flex flex-wrap justify-end gap-[5em] pr-[10em] sm:col-span-1 sm:gap-[1em] sm:pr-[5em] md:col-span-2">
           <div className="pl-[1em]">
             <h5 className="text-[var(--popover-foreground)] uppercase">Navigate</h5>
-            <ul className="mt-4 space-y-2 text-sm">
+            <ul className="mt-[1em] space-y-[2em] text-sm sm:mt-[2em] sm:space-y-[1em]">
               <li>
                 <Link href="/about" className="accent-link">
                   About Us
@@ -32,10 +32,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           <div>
             <h5 className="text-[var(--popover-foreground)] uppercase">Resources</h5>
-            <ul className="mt-4 space-y-2 text-sm">
+            <ul className="mt-[0.5em] space-y-[2em] text-sm sm:mt-[2em] sm:space-y-[1em]">
               <li>
                 <Link href="/privacy" className="accent-link">
                   Privacy Policy
