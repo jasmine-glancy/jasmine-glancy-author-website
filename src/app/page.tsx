@@ -14,16 +14,19 @@ export default function Home() {
   return (
     <div>
       <NavigationBar />
-      <div className="flex flex-[0.25em] flex-col items-center justify-center font-sans">
-        <main className="flex w-full max-w-7xl flex-[0.25em] flex-col items-center justify-between px-[1em] py-[2em] sm:items-start">
+      <div className="flex flex-[0.25em] flex-col items-center justify-center pt-[2em] font-sans">
+        <Image
+          src={jasmine_jewel_banner}
+          className="image h-[78vh] max-w-7xl"
+          alt="The image features a joyful interaction between a black Labrador Retriever, named Jewel, and a young woman named Jasmine Glancy. They are positioned on a grassy area that is softly blurred in the background, emphasizing their connection. Jewel is leaning in towards Jasmine, playfully licking her cheek. The dog's fur is glossy and well-groomed, showcasing a rich black color. Jasmine has a bright smile, her expression radiating happiness. She has curly dark hair, partially pulled back, and is wearing a colorful tie-dye shirt. The soft sunlight casts a gentle glow, enhancing the warm and cheerful atmosphere of the moment."
+          placeholder="blur"
+        />
+        <main
+          id="main-content"
+          className="flex w-full max-w-7xl flex-[0.25em] flex-col items-center justify-between px-[1em] py-[2em] sm:items-start"
+        >
           <div className="flex flex-col items-center gap-[1.5em] text-center sm:items-start sm:text-left">
-            <Image
-              src={jasmine_jewel_banner}
-              className="image h-[80vh]"
-              alt="The image features a joyful interaction between a black Labrador Retriever, named Jewel, and a young woman named Jasmine Glancy. They are positioned on a grassy area that is softly blurred in the background, emphasizing their connection. Jewel is leaning in towards Jasmine, playfully licking her cheek. The dog's fur is glossy and well-groomed, showcasing a rich black color. Jasmine has a bright smile, her expression radiating happiness. She has curly dark hair, partially pulled back, and is wearing a colorful tie-dye shirt. The soft sunlight casts a gentle glow, enhancing the warm and cheerful atmosphere of the moment."
-              placeholder="blur"
-            />
-            <h1>Welcome to my Author Website!</h1>
+            <h1 className="content-center">Welcome to my Author Website!</h1>
             <Separator />
 
             <div className="rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] p-[2em]">
@@ -35,8 +38,8 @@ export default function Home() {
                 heirloom bone broth gr
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-[5em]">
-              <Card className="w-[52vw] pr-[2em]">
+            <div className="grid grid-cols-2 gap-[2em]">
+              <Card className="w-[43vw]">
                 <CardHeader>
                   <CardTitle>Card testing</CardTitle>
                   <CardDescription>
@@ -72,7 +75,7 @@ export default function Home() {
               </Card>
               <Image
                 src={artemis}
-                className="ml-[12em] h-[50vh] w-[25vw] rounded-[1vw] bg-[var(--muted)] mask-linear-50 mask-linear-from-70% mask-linear-to-90%"
+                className="ml-[12em] h-[50vh] w-[22vw] rounded-[1vw] bg-[var(--muted)] mask-linear-50 mask-linear-from-70% mask-linear-to-90%"
                 alt="The image features a gray cat named Artemis, who is lying on a soft, blue blanket. The cat's fur has a blend of gray tones with visible stripes, displaying a smooth texture. Artemis has a slightly tilted head, revealing its large, expressive eyes and a white patch on its chin. The background includes a blurred view of furniture and muted colors, indicating a cozy indoor environment. The composition centers on the cat, highlighting its relaxed posture against the blanket."
                 placeholder="blur"
               />

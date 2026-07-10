@@ -13,7 +13,7 @@ const buttonVariants = cva(
         outline:
           'border-border hover:bg-input/50 hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground light:bg-input/30',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-[var(--saturated_secondary)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground',
+          'bg-secondary text-secondary-foreground hover:bg-[var(--saturated-secondary)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground',
         ghost:
           'hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground light:hover:bg-muted/50',
         destructive:
@@ -22,7 +22,7 @@ const buttonVariants = cva(
       },
       size: {
         default:
-          "h-7 gap-[0.25em] px-2 text-xs/relaxed has-data-[icon=inline-end]:pr-[0.375em] has-data-[icon=inline-start]:pl-[0.375em] [&_svg:not([class*='size-'])]:size-3.5",
+          "h-7 gap-[0.25em] px-[0.5em] text-xs/relaxed has-data-[icon=inline-end]:pr-[0.375em] has-data-[icon=inline-start]:pl-[0.375em] [&_svg:not([class*='size-'])]:size-3.5",
         xs: "h-[1.25em] gap-[0.25em] rounded-sm px-[0.5em] text-[0.625rem] has-data-[icon=inline-end]:pr-[0.375em] has-data-[icon=inline-start]:pl-[0.375em] [&_svg:not([class*='size-'])]:size-2.5",
         sm: "h-[1.5em] gap-[0.25em] px-[0.5em] text-xs/relaxed has-data-[icon=inline-end]:pr-[0.375em] has-data-[icon=inline-start]:pl-[0.375em] [&_svg:not([class*='size-'])]:size-3",
         lg: "h-[2em] gap-[0.25em] px-[0.65em] text-xs/relaxed has-data-[icon=inline-end]:pr-[0.5em] has-data-[icon=inline-start]:pl-[0.5em] [&_svg:not([class*='size-'])]:size-4",
