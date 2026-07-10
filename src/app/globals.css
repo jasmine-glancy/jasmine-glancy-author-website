@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@plugin 'daisyui';
 @import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
@@ -270,4 +271,8 @@ html {
 
 .scrollToTopButton.visible {
   opacity: 1;
+}
+
+.image {
+  @apply rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)];
 }
