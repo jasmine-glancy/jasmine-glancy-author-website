@@ -6,7 +6,7 @@ function NavigationBar() {
   return (
     <Navbar
       expand="lg"
-      className="flex w-full flex-wrap items-center justify-between gap-4 bg-linear-to-r/srgb from-[var(--saturated_accent)] via-[var(--saturated_primary)] to-[var(--saturated_secondary)] px-6 py-4 backdrop-blur-sm"
+      className="flex w-full flex-wrap items-center justify-between gap-[1em] bg-linear-to-r/srgb from-[var(--saturated_accent)] via-[var(--saturated_primary)] to-[var(--saturated_secondary)] px-[1.5em] py-[1em] backdrop-blur-sm"
     >
       <Navbar.Brand href="/" className="text-foreground text-2xl font-bold">
         <h2>Jasmine Glancy</h2>

@@ -52,7 +52,7 @@ export default function ToTop() {
       }}
     >
       <MoveUp
-        className="h-4 w-4 shrink-0 transition-colors duration-200"
+        className="h-[1em] w-[1em] shrink-0 transition-colors duration-200"
         style={{ color: 'var(--button-icon-color)' }}
       />
     </Button>

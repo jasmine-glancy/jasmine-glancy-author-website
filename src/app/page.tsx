@@ -14,7 +14,14 @@ export default function Home() {
       <div className="flex flex-1 flex-col items-center justify-center font-sans">
         <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-between px-16 py-32 sm:items-start">
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-            <Button variant="outline">Button</Button>
+            <div className="grid grid-cols-3 grid-rows-2 gap-[1em]">
+              <Button variant="outline">Outline Button</Button>
+              <Button variant="default">Default Button</Button>
+              <Button variant="secondary">Secondary Button</Button>
+              <Button variant="ghost">Ghost Button</Button>
+              <Button variant="destructive">Destructive Button</Button>
+              <Button variant="link">Link Button</Button>
+            </div>
             <Badge variant="default">Default Badge</Badge>
             <Badge variant="outline">Outline Badge</Badge>
             <Badge variant="secondary">Secondary Badge</Badge>
