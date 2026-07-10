@@ -1,19 +1,18 @@
-// Constructed with assistance from Michael Ojogbo
+// Based on the code from Michael Ojogbo
 // https://medium.com/@ojogbomichael/same-page-navigation-with-nextjs-bb99cccfda11
 
 'use client';
 import { Button } from '@/components/ui/button';
-import { MoveUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-export default function ToTop() {
+export default function ToContent() {
   //The approach recommended by Next.js
   const isBrowser = () => typeof window !== 'undefined';
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Show the button when the user scrolls down
-    if (window.scrollY > 100) {
+    // Keep the button until the user scrolls down
+    if (window.scrollY <= 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -30,16 +29,25 @@ export default function ToTop() {
     };
   }, []);
 
-  function scrollToTop() {
+  function scrollToContent() {
     if (!isBrowser()) return;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Finds the main content container
+    const content = document.getElementById('main-content');
+
+    if (content) {
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Ensures screen readers stay in sync
+      content.focus({ preventScroll: true });
+    }
   }
 
   return (
     <Button
-      aria-label="Scroll to Top"
-      className={`scrollButton group fixed h-[4em] w-[4em] ${isVisible ? 'visible' : ''} right-0 bottom-0 z-50 mr-[2em] mb-[2em] flex items-center rounded-full border border-[var(--sidebar-primary-foreground)] bg-[var(--sidebar-primary)] p-[1.5em] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--sidebar-primary)] hover:bg-[var(--sidebar-primary-foreground)] hover:text-[var(--sidebar-primary)]`}
-      onClick={scrollToTop}
+      aria-label="Skip to content"
+      className={`scrollButton group w-max-content fixed h-[2em] p-[1.5em] transition-colors duration-200 ${isVisible ? 'visible' : ''} right-0 z-50 mt-[0.5em] mr-[21.5em] flex items-center rounded-sm border border-[var(--sidebar-primary-foreground)] bg-[var(--secondary)] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--muted)] hover:bg-[var(--primary)] hover:text-[var(--muted)]`}
+      onClick={scrollToContent}
       style={{ ['--button-icon-color' as string]: 'var(--sidebar-primary-foreground)' }}
       onMouseEnter={(e) => {
         e.currentTarget.style.setProperty('--button-icon-color', 'var(--sidebar-primary)');
@@ -51,10 +59,7 @@ export default function ToTop() {
         );
       }}
     >
-      <MoveUp
-        className="h-[1em] w-[1em] shrink-0 transition-colors duration-200"
-        style={{ color: 'var(--button-icon-color)' }}
-      />
+      <h6>Skip to Content</h6>
     </Button>
   );
 }

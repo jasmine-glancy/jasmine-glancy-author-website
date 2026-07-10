@@ -68,11 +68,11 @@
 
   /* Interactive */
   --primary: #a28bff;
-  --saturated_primary: #6a44c8;
+  --saturated-primary: #6a44c8;
   --primary-foreground: #101018;
 
   --secondary: #7fb5ff;
-  --saturated_secondary: #4879d8;
+  --saturated-secondary: #4879d8;
   --secondary-foreground: #101018;
 
   /* Quiet UI */
@@ -81,7 +81,7 @@
 
   /* Accent */
   --accent: #cf6d8e;
-  --saturated_accent: #a6466c;
+  --saturated-accent: #a6466c;
   --accent-foreground: #101018;
 
   /* Utility */
@@ -263,13 +263,13 @@ html {
   scroll-behavior: smooth;
 }
 
-.scrollToTopButton {
+.scrollButton {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-.scrollToTopButton.visible {
+.scrollButton.visible {
   opacity: 1;
 }
 
