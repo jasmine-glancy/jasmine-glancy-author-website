@@ -14,19 +14,19 @@ export default function Home() {
   return (
     <div>
       <NavigationBar />
-      <div className="flex flex-[0.25em] flex-col items-center justify-center pt-[2em] font-sans">
+      <div className="flex flex-[0.25em] flex-col items-center justify-center pt-[0.5em] font-sans sm:pt-[2em]">
         <Image
           src={jasmine_jewel_banner}
-          className="image h-[78vh] max-w-7xl"
+          className="image sm:h-[78vh] sm:max-w-6xl"
           alt="The image features a joyful interaction between a black Labrador Retriever, named Jewel, and a young woman named Jasmine Glancy. They are positioned on a grassy area that is softly blurred in the background, emphasizing their connection. Jewel is leaning in towards Jasmine, playfully licking her cheek. The dog's fur is glossy and well-groomed, showcasing a rich black color. Jasmine has a bright smile, her expression radiating happiness. She has curly dark hair, partially pulled back, and is wearing a colorful tie-dye shirt. The soft sunlight casts a gentle glow, enhancing the warm and cheerful atmosphere of the moment."
           placeholder="blur"
         />
         <main
           id="main-content"
-          className="flex w-full max-w-7xl flex-[0.25em] flex-col items-center justify-between px-[1em] py-[2em] sm:items-start"
+          className="flex w-full flex-[0.25em] flex-col items-center justify-between px-[1em] py-[2em] sm:max-w-6xl sm:items-start"
         >
           <div className="flex flex-col items-center gap-[1.5em] text-center sm:items-start sm:text-left">
-            <h1 className="content-center">Welcome to my Author Website!</h1>
+            <h2>Welcome to my Author Website!</h2>
             <Separator />
 
             <div className="rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] p-[2em]">
@@ -38,8 +38,8 @@ export default function Home() {
                 heirloom bone broth gr
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-[2em]">
-              <Card className="w-[43vw]">
+            <div className="grid h-fit grid-cols-1 gap-[1em] sm:grid-cols-2 sm:gap-[10em]">
+              <Card className="w-[90vw] sm:w-[65vw]">
                 <CardHeader>
                   <CardTitle>Card testing</CardTitle>
                   <CardDescription>
@@ -59,7 +59,7 @@ export default function Home() {
                     Muted Link,
                   </Link>
                   <Link href="/dashboard">Normal Link</Link>
-                  <div className="grid grid-cols-3 grid-rows-2 gap-[1em]">
+                  <div className="grid grid-cols-2 grid-rows-3 gap-[1em] sm:grid-cols-3 sm:grid-rows-2 sm:gap-[0.5em]">
                     <Button variant="outline">Outline Button</Button>
                     <Button variant="default">Default Button</Button>
                     <Button variant="secondary">Secondary Button</Button>
@@ -75,7 +75,7 @@ export default function Home() {
               </Card>
               <Image
                 src={artemis}
-                className="ml-[12em] h-[50vh] w-[22vw] rounded-[1vw] bg-[var(--muted)] mask-linear-50 mask-linear-from-70% mask-linear-to-90%"
+                className="image bg-[var(--muted)] mask-linear-50 mask-linear-from-70% mask-linear-to-90% object-fill sm:ml-[12em] sm:w-[22vw]"
                 alt="The image features a gray cat named Artemis, who is lying on a soft, blue blanket. The cat's fur has a blend of gray tones with visible stripes, displaying a smooth texture. Artemis has a slightly tilted head, revealing its large, expressive eyes and a white patch on its chin. The background includes a blurred view of furniture and muted colors, indicating a cozy indoor environment. The composition centers on the cat, highlighting its relaxed posture against the blanket."
                 placeholder="blur"
               />
