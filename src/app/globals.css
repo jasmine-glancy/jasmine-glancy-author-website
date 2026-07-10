@@ -198,7 +198,8 @@
   h6 {
     @apply font-heading;
   }
-  h1 {
+  h1,
+  .h1 {
     @apply text-5xl font-black;
   }
   h2 {
@@ -207,13 +208,15 @@
   h3 {
     @apply text-3xl font-bold;
   }
-  h4 {
+  h4,
+  .h4 {
     @apply text-2xl font-semibold;
   }
   h5 {
     @apply text-xl font-medium;
   }
-  h6 {
+  h6,
+  .h6 {
     @apply text-lg font-medium;
   }
   button:not(:disabled),

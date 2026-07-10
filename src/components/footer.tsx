@@ -16,10 +16,10 @@ export default function Footer() {
 
         {/* Navigation Categories */}
 
-        <div className="flex flex-wrap justify-end gap-[5em] pr-[10em] sm:col-span-1 sm:gap-[1em] sm:pr-[5em] md:col-span-2">
+        <div className="flex flex-wrap justify-center gap-[2em] sm:col-span-1 sm:justify-end sm:gap-[5em] sm:pr-[5em] md:col-span-2">
           <div className="pl-[1em]">
-            <h5 className="text-[var(--popover-foreground)] uppercase">Navigate</h5>
-            <ul className="mt-[1em] space-y-[2em] text-sm sm:mt-[2em] sm:space-y-[1em]">
+            <h5 className="text-center text-[var(--popover-foreground)] uppercase">Navigate</h5>
+            <ul className="mt-[1em] space-y-[0.5em] text-center text-sm sm:mt-[2em] sm:space-y-[1em]">
               <li>
                 <Link href="/about" className="accent-link">
                   About Us
@@ -33,8 +33,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="text-[var(--popover-foreground)] uppercase">Resources</h5>
-            <ul className="mt-[0.5em] space-y-[2em] text-sm sm:mt-[2em] sm:space-y-[1em]">
+            <h5 className="text-center text-[var(--popover-foreground)] uppercase">Resources</h5>
+            <ul className="mt-[1em] space-y-[0.5em] text-center text-sm sm:mt-[2em] sm:space-y-[1em]">
               <li>
                 <Link href="/privacy" className="accent-link">
                   Privacy Policy
@@ -51,8 +51,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright Area */}
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 border-t border-[var(--border)] px-4 py-6 pb-[6em] text-[var(--muted-foreground)] sm:flex-row">
-        <p className="center-content">&copy; {currentYear} Jasmine Glancy. All rights reserved.</p>
+      <div className="mx-auto flex max-w-7xl flex-col justify-center gap-4 border-t border-[var(--border)] px-4 py-6 pb-[6em] text-[var(--muted-foreground)] sm:flex-row">
+        <p className="text-center">&copy; {currentYear} Jasmine Glancy. All rights reserved.</p>
       </div>
     </footer>
   );

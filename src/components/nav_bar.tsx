@@ -9,7 +9,7 @@ function NavigationBar() {
       expand="lg"
       className="flex w-full flex-wrap items-center justify-between gap-[1em] bg-linear-to-r/srgb from-[var(--saturated-accent)] via-[var(--saturated-primary)] to-[var(--saturated-secondary)] px-[1.5em] py-[1em] backdrop-blur-sm"
     >
-      <Navbar.Brand href="/" className="text-foreground text-2xl font-bold">
+      <Navbar.Brand href="/" className="text-foreground sm:text-2xl sm:font-bold">
         <h2>Jasmine Glancy</h2>
       </Navbar.Brand>
 
@@ -17,18 +17,21 @@ function NavigationBar() {
 
       <ToContent />
       <div className="flex flex-wrap items-center gap-4">
-        <Link href="#home" className="text-foreground/80 hover:text-foreground text-xl font-medium">
+        <Link
+          href="#home"
+          className="text-foreground/80 hover:text-foreground sm:text-xl sm:font-medium"
+        >
           Home
         </Link>
         <Link
           href="#about"
-          className="text-foreground/80 hover:text-foreground text-xl font-medium"
+          className="text-foreground/80 hover:text-foreground sm:text-xl sm:font-medium"
         >
           About
         </Link>
         <Link
           href="#contact"
-          className="text-foreground/80 hover:text-foreground text-xl font-medium"
+          className="text-foreground/80 hover:text-foreground sm:text-xl sm:font-medium"
         >
           Contact
         </Link>
