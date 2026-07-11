@@ -1,3 +1,4 @@
+'use client';
 import { Button } from './ui/button';
 
 type HeroProps = {
@@ -15,6 +16,36 @@ export default function Hero({
   authorSubtitle,
   briefIntro,
 }: HeroProps) {
+  //The approach recommended by Next.js
+  const isBrowser = () => typeof window !== 'undefined';
+
+  function scrollToAbout() {
+    if (!isBrowser()) return;
+
+    // Finds the main content container
+    const content = document.getElementById('main-content');
+
+    if (content) {
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Ensures screen readers stay in sync
+      content.focus({ preventScroll: true });
+    }
+  }
+
+  function scrollToJewel() {
+    if (!isBrowser()) return;
+
+    // Finds the main content container
+    const content = document.getElementById('jewel-and-eenp');
+
+    if (content) {
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Ensures screen readers stay in sync
+      content.focus({ preventScroll: true });
+    }
+  }
   return (
     <>
       {textType ? (
@@ -38,7 +69,10 @@ export default function Hero({
       )}
 
       {imageType ? (
-        <div className="image hero min-h-[70vh] w-full bg-[url('https://i.imgur.com/IthfEpv.jpeg')] bg-contain bg-cover bg-top bg-no-repeat lg:min-h-[108vh] xl:min-h-[80vh]">
+        <div
+          alt-text="A young woman pets her black dog lying on the grass. The woman wears a colorful tie-dye t-shirt and camouflage leggings."
+          className="image hero min-h-[70vh] w-full bg-[url('https://i.imgur.com/IthfEpv.jpeg')] bg-contain bg-cover bg-top bg-no-repeat lg:min-h-[108vh] xl:min-h-[80vh]"
+        >
           <div className="hero-overlay bg-black/50"></div>
 
           <div className="hero-content text-neutral-content px-[5em] text-center">
@@ -49,13 +83,25 @@ export default function Hero({
                 {briefIntro}
               </p>
               <div className="align-center mt-[1em] grid grid-cols-1 place-items-center gap-[1em] md:grid-cols-3 md:gap-[4em]">
-                <Button variant="secondary" className="text-md md:mt-[2em]" size="lg">
+                <Button
+                  variant="secondary"
+                  aria-label="Learn about me"
+                  onClick={scrollToAbout}
+                  className="text-md md:mt-[2em]"
+                  size="lg"
+                >
                   Learn More About Me
                 </Button>
-                <Button variant="accent" className="text-md ml-[1em] md:mt-[2em]" size="lg">
-                  Did You Say &#34;Service Dog&#34;?
+                <Button
+                  variant="accent"
+                  aria-label="Did you say service dog?"
+                  onClick={scrollToJewel}
+                  className="text-md ml-[1em] md:mt-[2em]"
+                  size="lg"
+                >
+                  Did You Say &ldquo;Service Dog&rdquo;?
                 </Button>
-                <Button className="text-md md:mt-[2em]" size="lg">
+                <Button aria-label="What inspires me" className="text-md md:mt-[2em]" size="lg">
                   What Inspires Me
                 </Button>
               </div>

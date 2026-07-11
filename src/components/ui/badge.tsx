@@ -11,8 +11,8 @@ const badgeVariants = cva(
       variant: {
         default: 'bg-primary p-[1em] text-primary-foreground [a]:hover:bg-primary/80',
         secondary: 'bg-secondary p-[1em] text-secondary-foreground [a]:hover:bg-secondary/80',
-        destructive:
-          'bg-destructive/10 p-[1em] text-destructive focus-visible:ring-destructive/20 light:bg-destructive/20 light:focus-visible:ring-destructive/40 [a]:hover:bg-destructive/20',
+        accent:
+          'bg-[var(--accent)]/75 p-[1em] text-[var(--foreground)] focus-visible:ring-[var(--foreground)]/20 light:bg-[var(--foreground)]/20 light:focus-visible:ring-[var(--foreground)]/40 [a]:hover:bg-[var(--foreground)]/20',
         outline:
           'border-border p-[1em] bg-input/20 text-foreground light:bg-input/30 [a]:hover:bg-muted [a]:hover:text-muted-foreground',
         ghost: 'hover:bg-muted p-[1em] hover:text-muted-foreground light:hover:bg-muted/50',

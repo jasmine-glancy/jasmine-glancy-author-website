@@ -38,7 +38,7 @@ export default function ToTop() {
   return (
     <Button
       aria-label="Scroll to Top"
-      className={`scrollButton group fixed h-[4em] w-[4em] ${isVisible ? 'visible' : ''} right-0 bottom-0 z-50 mr-[2em] mb-[2em] flex items-center rounded-full border border-[var(--sidebar-primary-foreground)] bg-[var(--sidebar-primary)] p-[1.5em] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--sidebar-primary)] hover:bg-[var(--sidebar-primary-foreground)] hover:text-[var(--sidebar-primary)]`}
+      className={`scrollButton group fixed h-[4em] w-[4em] ${isVisible ? 'visible' : ''} right-0 bottom-0 z-50 mr-[6em] mb-[2em] flex items-center rounded-full border border-[var(--sidebar-primary-foreground)] bg-[var(--sidebar-primary)] p-[1.5em] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--sidebar-primary)] hover:bg-[var(--sidebar-primary-foreground)] hover:text-[var(--sidebar-primary)]`}
       onClick={scrollToTop}
       style={{ ['--button-icon-color' as string]: 'var(--sidebar-primary-foreground)' }}
       onMouseEnter={(e) => {
@@ -52,7 +52,7 @@ export default function ToTop() {
       }}
     >
       <MoveUp
-        className="h-[1em] w-[1em] shrink-0 transition-colors duration-200"
+        className="h-[2em] w-[2em] shrink-0 transition-colors duration-200"
         style={{ color: 'var(--button-icon-color)' }}
       />
     </Button>

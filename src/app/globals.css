@@ -278,3 +278,7 @@ html {
 .image {
   @apply rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)];
 }
+
+em {
+  @apply pr-[0.25em] pl-[0.2em];
+}
