@@ -46,7 +46,7 @@ export default function ToContent() {
   return (
     <Button
       aria-label="Skip to content"
-      className={`scrollButton h5 sm:h4 group w-max-content fixed font-bold transition-colors duration-200 sm:h-[2em] sm:p-[1.5em] ${isVisible ? 'visible' : ''} z-50 mt-[4.5em] ml-[17em] flex items-center rounded-sm border border-[var(--sidebar-primary-foreground)] bg-[var(--secondary)] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--muted)] hover:bg-[var(--primary)] hover:text-[var(--muted)] sm:right-0 sm:mt-[0.5em] sm:mr-[21.5em]`}
+      className={`scrollButton h5 sm:h4 group w-max-content fixed text-sm font-bold transition-colors duration-200 sm:h-[2em] sm:p-[1.5em] ${isVisible ? 'visible' : ''} z-50 mt-[4.5em] ml-[17em] flex items-center rounded-sm border border-[var(--sidebar-primary-foreground)] bg-[var(--secondary)] text-[var(--sidebar-primary-foreground)] transition-colors duration-200 hover:border-[var(--muted)] hover:bg-[var(--primary)] hover:text-[var(--muted)] sm:right-0 sm:mt-[0.5em] sm:mr-[21.5em]`}
       onClick={scrollToContent}
       style={{ ['--button-icon-color' as string]: 'var(--sidebar-primary-foreground)' }}
       onMouseEnter={(e) => {
