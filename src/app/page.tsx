@@ -70,7 +70,7 @@ export default function Home() {
                   <Badge variant="default">Default Badge</Badge>
                   <Badge variant="outline">Outline Badge</Badge>
                   <Badge variant="secondary">Secondary Badge</Badge>
-                  <Badge variant="destructive">Destructive Badge</Badge>
+                  <Badge variant="accent">Destructive Badge</Badge>
                 </CardContent>
               </Card>
               <Image
