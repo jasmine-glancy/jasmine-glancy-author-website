@@ -22,7 +22,7 @@ export default function Footer() {
             <ul className="mt-[1em] space-y-[0.5em] text-center text-sm sm:mt-[2em] sm:space-y-[1em]">
               <li>
                 <Link href="/about" className="accent-link">
-                  About Us
+                  About Me
                 </Link>
               </li>
               <li>
