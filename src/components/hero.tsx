@@ -46,6 +46,20 @@ export default function Hero({
       content.focus({ preventScroll: true });
     }
   }
+
+  function scrollToInspiration() {
+    if (!isBrowser()) return;
+
+    // Finds the main content container
+    const content = document.getElementById('inspiration');
+
+    if (content) {
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Ensures screen readers stay in sync
+      content.focus({ preventScroll: true });
+    }
+  }
   return (
     <>
       {textType ? (
@@ -101,7 +115,12 @@ export default function Hero({
                 >
                   Did You Say &ldquo;Service Dog&rdquo;?
                 </Button>
-                <Button aria-label="What inspires me" className="text-md md:mt-[2em]" size="lg">
+                <Button
+                  aria-label="What inspires me"
+                  className="text-md md:mt-[2em]"
+                  onClick={scrollToInspiration}
+                  size="lg"
+                >
                   What Inspires Me
                 </Button>
               </div>

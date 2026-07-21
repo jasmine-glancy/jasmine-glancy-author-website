@@ -9,12 +9,14 @@ import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import { Smile } from 'lucide-react';
 import ToTop from '@/components/to_top_button';
+import Playlist from '@/components/playlist';
+import ToolTip from '@/components/tooltip';
 
 export default function About() {
   return (
     <div>
       <NavigationBar />
-      <div className="flex flex-[0.25em] flex-col items-center justify-center font-sans">
+      <div className="ml-[1.5em] flex flex-[0.25em] flex-col items-center justify-center font-sans">
         <main className="mr-[2em] flex max-w-4xl flex-[0.25em] flex-col items-center justify-between gap-[1.5em] px-[1em] py-[2em] sm:max-w-7xl sm:items-start xl:w-[75em]">
           <Hero
             imageType={true}
@@ -59,7 +61,7 @@ export default function About() {
                 development would be after 2022! Customization is an amazing thing. My brain likes
                 to work and my eyes like to be happy.
               </p>
-              <div className="grid grid-cols-2 pt-[1.5em]">
+              <div className="grid grid-cols-1 pt-[1.5em] sm:grid-cols-2">
                 <h3>Writing Philosophy</h3>
                 <h4 className="pb-[1em] text-center">... Input ● Crock-Pot Style ● Plots-er</h4>
               </div>
@@ -80,6 +82,12 @@ export default function About() {
                 Flexibility is important to my creative process, but requirements can spark
                 creativity, too! I have writing prompts to thank for some of my foundational
                 world-building.
+              </p>
+              <h3 className="pt-[1.5em]">A.I. Philosophy</h3>
+              <p className="pt-[1em]">
+                The only A.I. features I use when writing my stories are grammar/spell-checkers. The
+                creative process means a lot to me, and I get the most out of organic interactions
+                with my work.
               </p>
             </div>
 
@@ -171,7 +179,7 @@ export default function About() {
               />
               <div
                 id="jewel-and-eenp"
-                className="mt-[0.1em] rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] object-fill p-[2em] sm:mt-[1em] sm:mr-[20em] sm:w-[50vw] 2xl:w-[30vw]"
+                className="mt-[0.1em] rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] object-fill p-[2em] sm:mt-[1em] sm:mr-[20em] sm:w-[50vw] 2xl:w-[33vw]"
               >
                 <h5 className="pb-[1em] text-center">Best girl ● Licker license est. 2018</h5>
                 <p className="mt-[1em]">
@@ -185,10 +193,10 @@ export default function About() {
                   communicated with people.
                 </p>
                 <p className="mt-[1em]">
-                  A non-profit organization called{' '}
+                  A non-profit organization called
                   <Link className="accent-link" title="EENP.org" href="https://eenp.org/">
                     Eyes Ears Nose & Paws
-                  </Link>{' '}
+                  </Link>
                   worked for 2.5 years with the residents at the North Carolina prisons to help
                   train Jewel. When they placed her with me, they worked with me so I could learn to
                   communicate with her. My experience with dogs in the hospital and occasionally
@@ -202,7 +210,7 @@ export default function About() {
                   Corrections.
                 </p>
                 <p className="mt-[1em]">
-                  Jewel&apos;s favorite game is{' '}
+                  Jewel&apos;s favorite game is
                   <Link
                     className="secondary-link"
                     title="Scent work (American Kennel Club)"
@@ -216,17 +224,95 @@ export default function About() {
                   treats for doing her favorite thing—smells!
                 </p>
                 <h3 className="mt-[1em]">Jewel&apos;s Other Favorite Things</h3>
-                <div className="mt-[2em] mr-[1em] grid grid-cols-3 gap-[2em] xl:mr-[0.1em]">
-                  <Badge variant="accent" className="sm:text-md text-sm">
-                    Sweet Potato
-                  </Badge>
-                  <Badge variant="default" className="sm:text-md ml-[1em] text-sm sm:ml-[1.25em]">
-                    Carrots
-                  </Badge>
-                  <Badge variant="secondary" className="sm:text-md text-sm">
-                    Large, Soft Toys
-                  </Badge>
+                <div className="ml-[2em]">
+                  <div className="mt-[2em] mr-[1em] grid grid-cols-1 place-items-center gap-[1em] pr-[1em] sm:mr-[1em] sm:grid-cols-3 sm:gap-[2em] xl:mr-[0.1em]">
+                    <Badge variant="secondary" className="sm:text-md ml-[0.5em] text-sm">
+                      Sweet Potato
+                    </Badge>
+                    <Badge
+                      variant="default"
+                      className="sm:text-md ml-[0.5em] text-sm sm:ml-[1.25em]"
+                    >
+                      Carrots
+                    </Badge>
+                    <Badge className="sm:text-md sm:text-md ml-[0.5em] bg-[var(--accent)] text-sm sm:ml-[4em]">
+                      Large, Soft Toys
+                    </Badge>
+                  </div>
+                  <div className="mt-[1em] grid grid-cols-1 place-items-center gap-[1em] pr-[2em] sm:grid-cols-2 md:mt-[2em] xl:ml-[0.1em]">
+                    <Badge className="sm:text-md ml-[1em] bg-[var(--primary)] text-sm sm:ml-[4em] md:bg-[var(--accent)]">
+                      Cuddles
+                    </Badge>
+                    <Badge variant="secondary" className="sm:text-md ml-[1em] text-sm sm:mr-[10em]">
+                      Kisses
+                    </Badge>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <h2 id="inspiration" className="mt-[1em]">
+              Inspiration
+            </h2>
+            <Separator />
+            <div className="2xl:max-w-8xl mt-[2em] grid max-w-7xl grid-cols-1 md:gap-[0.25em] xl:max-w-7xl xl:grid-cols-2 2xl:gap-[2em]">
+              <div className="mr-[4em] mb-[2em] grid w-[83vw] grid-cols-1 gap-[0.1em] rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] p-[2em] sm:mr-[20em] sm:w-[50vw] sm:gap-[1em] md:mb-[0em] md:grid-cols-2 2xl:w-[33vw]">
+                <ToolTip
+                  bookTitle="Warriors"
+                  buttonVariants="accent"
+                  creatorName="Erin Hunter"
+                  summaryOnHover="A middle-grade book series about fantasy groups of cats with politcal, medicinal, and religious systems."
+                  toolTipStyle="accent-tooltip"
+                />
+                <ToolTip
+                  bookTitle="Animorphs"
+                  buttonVariants="default"
+                  creatorName="K.A. Applegate"
+                  summaryOnHover="A middle-grade book series about a group of middle-schoolers who are given the power of shapeshifting to fight a parasitic alien invasion."
+                  toolTipStyle="tooltip-primary"
+                />
+                <ToolTip
+                  movieOrTvTitle="Pantheon"
+                  buttonVariants="secondary"
+                  creatorName="Ken Liu & Craig Silverstein"
+                  summaryOnHover="An American adult animated science fiction drama where mind uploading technology is on the verge of mass adoption"
+                  toolTipStyle="secondary-tooltip"
+                />
+                <ToolTip
+                  movieOrTvTitle="Bojack Horseman"
+                  buttonVariants="accent"
+                  creatorName="Raphael Bob-Waksberg"
+                  summaryOnHover="An American adult animated tragicomedy about a humanoid horse who was once the star of a 90's sitcom."
+                  toolTipStyle="accent-tooltip"
+                />
+              </div>
+              <Playlist className="mt-[0.5em] w-[100%] sm:mt-[1em] sm:ml-[0.5em] sm:w-[65vw] xl:ml-[10em] 2xl:mt-[1.1em] 2xl:ml-[0.15em]" />
+            </div>
+
+            <h2 className="mt-[1em]">Interests</h2>
+            <Separator />
+            <div className="mt-[2em] w-[100%] rounded-[1vw] border-[0.3em] border-double bg-[var(--muted)] object-fill p-[2em]">
+              I am fortunate to have many interests besides writing. Sometimes it&apos;s hard to
+              chase all of my loves, but I find joy in the following:
+              <div className="mt-[1em] grid grid-cols-1 place-items-center gap-[1em] md:grid-cols-6">
+                <Badge variant="default" className="text-sm">
+                  Leatherworking
+                </Badge>
+                <Badge variant="secondary" className="text-sm">
+                  Costume Design
+                </Badge>
+                <Badge variant="accent" className="text-sm">
+                  Web Design
+                </Badge>
+                <Badge variant="default" className="text-sm">
+                  Python Coding
+                </Badge>
+                <Badge variant="secondary" className="text-sm">
+                  Baking
+                </Badge>
+                <Badge variant="accent" className="text-sm">
+                  Biology
+                </Badge>
               </div>
             </div>
           </div>
