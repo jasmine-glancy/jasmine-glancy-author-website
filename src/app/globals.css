@@ -82,7 +82,7 @@
   /* Accent */
   --accent: #cf6d8e;
   --saturated-accent: #a6466c;
-  --accent-foreground: #101018;
+  --accent-foreground: #020202;
 
   /* Utility */
   --destructive: #ff7373;
@@ -239,10 +239,10 @@
     @apply underline decoration-dotted transition-colors;
   }
   a.secondary-link {
-    @apply text-secondary hover:text-primary/50 transition-colors;
+    @apply text-secondary hover:text-primary/50 pl-[0.25em] transition-colors;
   }
   a.accent-link {
-    @apply text-accent hover:text-accent/50 underline;
+    @apply text-accent hover:text-accent/50 pr-[0.25em] pl-[0.25em] underline;
   }
   a.muted-link {
     @apply text-muted-foreground hover:text-foreground;
@@ -281,4 +281,31 @@ html {
 
 em {
   @apply pr-[0.25em] pl-[0.2em];
+}
+
+.list {
+  @apply bg-[var(--popover)];
+}
+
+.accent-tooltip::before,
+.accent-tooltip::after {
+  --tt-bg: var(--accent);
+  color: var(--foreground);
+}
+
+.tooltip {
+  --tt-bg: var(--saturated-secondary);
+  color: var(--background);
+}
+
+.tooltip-primary::before,
+.tooltip-primary::after {
+  --tt-bg: var(--primary);
+  color: var(--background);
+}
+
+.secondary-tooltip::before,
+.secondary-tooltip::after {
+  --tt-bg: var(--secondary);
+  color: var(--background);
 }
